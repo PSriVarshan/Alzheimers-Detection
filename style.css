@@ -1,0 +1,256 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width:100%;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.background-image {
+    position: absolute;
+    background-image: url('brain.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: block;
+    background-color: black;
+}
+
+nav {
+    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 19px;
+}
+
+/* Dropdown styling */
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Hover effect for navbar items */
+nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 20px;
+}
+
+nav ul li .dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: #555;
+    border-radius: 20px;
+}
+
+h1{
+    color: #fff;
+    font-size: 50px;
+    padding-left: 30px;
+}
+
+h2{
+    color:orange;
+    font-size : 30px;
+    padding-left: 30px;
+}
+h3{
+    color:rgb(251, 255, 0);
+    padding-left: 30px;
+}
+
+.card {
+    background-color: rgba(204, 204, 204, 0.8); /* White with 80% opacity */
+    padding: 17px;
+    padding-top: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    width: 47%;
+    align-content: center;
+}
+p{
+    font-size:20px;
+    line-height: 1.6;
+}
+
+.container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h4{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+  }
+
+  .additional-content {
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+}
+
+
+
+/*landing page*/
+
+/* White box covering the right side */
+.white-box {
+    position: absolute;
+    top: 0;
+    right: 0; /* Aligns the white box to the right side */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    width: 45%; /* Covers half the page */
+    height: 100vh; /* Full height of the viewport */
+    border-radius: 50px 0 0 50px; /* Rounded corners on the left side */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    padding: 40px; /* Add padding for content */
+    box-sizing: border-box;
+}
+
+
+
+
+.logo_landing{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.content {
+    color: #000000; /* Text color */
+    text-align: center; /* Center the text content inside the box */
+}
+
+.paragraph-1
+{
+    font-size: 25px;
+}
+.paragraph-2
+{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.button-container {
+    text-align: center;
+}
+
+.begin-now-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #1a3e64; /* Blue button background */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+    border-radius: 15px;
+}
+
+.begin-now-button:hover {
+    background-color: #1E2B3A; /* Darker blue on hover */
+    border-radius: 15px;
+}
+
+/* Login Page */
+.login{
+    align-items: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #1E2B3A;
+    letter-spacing: 0.5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 80%;
+    padding: 14px;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 57px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px; /* Adjust icon size */
+}
+
+
+
+
