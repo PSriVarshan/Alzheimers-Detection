@@ -7,6 +7,7 @@ body,html{
     align-items: center;
     justify-content: center;
     position: relative;
+    
 }
 
 .background-image {
@@ -137,10 +138,124 @@ p{
     padding: 5px;
     text-align: center;
     background-color: black;
+    height:100%;
 }
 
 
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.column {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.column:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.heading {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #ff2a8a; /* Customize heading color */
+    text-align: center;
+}
+
+.point {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff; /* Customize point color */
+    text-align: center;
+}
+
+
+/* card flip */
+
+.flip-card-container{
+    padding-left: 150px;
+    display: flex;
+    gap: 300px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Perspective for 3D effect */
+    padding-left: 100px;
+    padding-top: 10px;
+    
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back side when not flipped */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.flip-card-front {
+    background-color: #000000; /* Blue front side */
+   
+}
+
+.flip-card-back {
+    background-color: #000000; /* Dark back side */
+    transform: rotateY(180deg);
+    justify-content: left;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* Sparkles */
+i {
+    width: 3px; /* Set the size of the sparkle */
+    height: 3px; /* Set the size of the sparkle */
+    border-radius: 50%; /* Make the sparkle circular */
+    background-color: rgb(255, 255, 255); /* Color of the sparkle */
+    position: absolute;
+    pointer-events: none; /* Prevents the sparkles from interfering with mouse events */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                0 0 20px rgba(255, 255, 255, 0.6),
+                0 0 30px rgba(255, 255, 255, 0.4);
+    animation: sparkle-animation 2s forwards ease-out;
+}
+
+@keyframes sparkle-animation {
+    to {
+        opacity: 0;
+        transform: translate(var(--x), var(--y)) scale(0.5);
+    }
+}
 /*landing page*/
 
 /* White box covering the right side */
@@ -170,8 +285,8 @@ p{
 }
 
 .content {
-    color: #000000; /* Text color */
-    text-align: center; /* Center the text content inside the box */
+    color: #000000; 
+    text-align: center; 
 }
 
 .paragraph-1
@@ -194,19 +309,19 @@ p{
     padding: 15px 30px;
     font-size: 18px;
     color: #fff;
-    background-color: #1a3e64; /* Blue button background */
+    background-color: #1a3e64; 
     border: none;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.7s ease;
-    border-radius: 15px;
+    border-radius: 19px;
 }
 
 .begin-now-button:hover {
-    background-color: #1E2B3A; /* Darker blue on hover */
-    border-radius: 15px;
+    background-color: #1E2B3A; 
+    border-radius: 19px;
 }
 
 /* Login Page */
@@ -248,9 +363,37 @@ input[type="password"] {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    font-size: 20px; /* Adjust icon size */
+    font-size: 20px; 
 }
 
+.reset-password{
+    font-size: 17px;
+    padding-left: 4px;
+}
 
+.sign-up{
+    text-align: center;
+}
 
-
+/* MRI page*/
+.upload{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(204, 204, 204, 0.8); /* White with 80% opacity */
+    padding: 17px;
+    padding-top: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    width: 47%;
+    align-content: center;
+    opacity:65%;
+}
+.container2{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
