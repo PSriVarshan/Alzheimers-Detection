@@ -1,0 +1,193 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../props/brain.png') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.answer {
+    display: none;
+    padding: 10px;
+    color: #555;
+}
+
+.question {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    color: #333;
+}
+
+hr {
+    border: 0.5px solid #ccc;
+}
+
+h1 {
+    color: #fff;
+    font-size: 50px;
+    padding-left: 30px;
+}
+
+h2 {
+    color: orange;
+    font-size: 30px;
+    padding-left: 30px;
+}
+
+h3 {
+    color: rgb(251, 255, 0);
+    padding-left: 30px;
+}
+h4 {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 19px;
+}
+
+/* Dropdown styling */
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Hover effect for navbar items */
+nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 20px;
+}
+
+nav ul li .dropdown-content a {
+    color: white;
+    
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: #555;
+}
+
+
+.card {
+    background-color: rgba(204, 204, 204, 0.8);
+    padding: 17px;
+    padding-top: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    
+    & ul{
+        list-style:inside;
+        padding-left: -200px;
+        font-size: 18px;
+    }
+}
+.container { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+}
+
+
+.card-f {
+    background-color: rgba(204, 204, 204, 0.8);
+    padding-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+.footdet{
+    padding: 4%;
+}
+
+.additional-content {
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+    height: 50%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    & p {
+        color: pink;
+    }
+}
+
+.column:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlzWELL - DICOM Upload</title>
+    <link rel="stylesheet" href="/static/styles/dicom.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">AlzWELL</div>
+        <a href="/ed.html" class="login-signup">Go back</a>
+    </nav>
+    <div class="content-container">
+        <h2>DICOM File Upload</h2>
+        <div class="upload-container">
+            <div class="upload-section">
+                <div class="upload-icon">
+                    <img src="/static/props/uploadicons.gif" alt="Upload Icon">
+                </div>
+                <h4>Drag and Drop DICOM files to upload</h4>
+                <p>or</p>
+                <label for="dicomUpload" class="custom-file-label">Browse</label>
+                <input type="file" id="dicomUpload" accept=".dcm">
+            </div>
+            <div class="upload-guidelines">
+                <h3>Upload Guidelines</h3>
+                <ul>
+                    <li><b>File Format:</b> Acceptable formats include DICOM (.dcm).</li>
+                    <li><b>Resolution:</b> Ensure the DICOM file is high-quality for better analysis.</li>
+                    <li><b>Compliance:</b> Files must adhere to DICOM standards.</li>
+                </ul>
+            </div>
+        </div>
+        <button id="submitBtn">Submit</button>
+    </div>
+
+</body>
+<script>
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        const inputFile = document.getElementById('dicomUpload').files[0];
+        if (!inputFile) {
+            alert('Please select a DICOM file to upload.');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('file', inputFile);
+
+        fetch('/upload', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert('Error: ' + data.error);
+            } else {
+                alert(`Prediction: ${data.predicted_class}\nConfidence: ${(data.confidence * 100).toFixed(2)}%`);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while processing the file.');
+        });
+    });
+</script>
+
+</html>

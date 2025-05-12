@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - AlzWELL</title>
+    <link rel="stylesheet" href="static/styles/styles.css">
+</head>
+<body>
+    <div class="background-image"></div>
+
+    <nav>
+        <div class="logo">AlzWELL</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ed.html">Early Detection</a></li>
+            <li><a href="hiw.html">How It Works</a></li>
+            <li><a href="res.html">Resources</a></li>
+            <li><a href="faqs.html" class="active">FAQs</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h4>Frequently Asked Questions</h4>
+    </header>
+
+    <div class="container">
+        <section class="card">
+            <h2>FAQs</h2>
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">What is AlzWELL?</div>
+                <div class="answer">AlzWELL is an AI-powered system designed for early detection and prediction of Alzheimer's Disease using MRI analysis, biomarkers, and advanced machine learning models.</div>
+            </div>
+            <hr>
+
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">How does MRI analysis work?</div>
+                <div class="answer">Our system processes DICOM-format MRI scans, converts them to image format, and uses a deep learning model to predict Alzheimer's based on image patterns.</div>
+            </div>
+            <hr>
+
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">What is biomarker analysis?</div>
+                <div class="answer">Biomarker analysis evaluates patient data such as age, gender, FDG and PIB values, marital status, and APOE4 allele count to predict Alzheimer's likelihood using an ensemble machine learning model.</div>
+            </div>
+            <hr>
+
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">Is the system suitable for clinical use?</div>
+                <div class="answer">While AlzWELL provides precise predictions, it is intended to assist researchers and clinicians rather than replace medical judgment.</div>
+            </div>
+            <hr>
+
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">How accurate is the system?</div>
+                <div class="answer">The accuracy depends on the quality of input data. Both MRI analysis and biomarker-based models are rigorously tested for high reliability and precision.</div>
+            </div>
+            <hr>
+
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">How does AlzWELL handle patient privacy?</div>
+                <div class="answer">AlzWELL ensures that patient data is anonymized and securely stored. It adheres to data protection regulations such as HIPAA and GDPR.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">What formats are accepted for MRI scans?</div>
+                <div class="answer">The system primarily accepts MRI scans in DICOM (.dcm) format. These files are converted to image formats for processing by the deep learning model.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">What is the role of APOE4 allele count in biomarker analysis?</div>
+                <div class="answer">APOE4 allele count is a key genetic factor associated with a higher risk of Alzheimer's disease. Our biomarker analysis integrates this information to improve prediction accuracy.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">Can AlzWELL predict the progression of Alzheimer's disease?</div>
+                <div class="answer">Currently, AlzWELL focuses on early detection and prediction of Alzheimer's onset. Future versions aim to include progression tracking based on longitudinal data.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">Does AlzWELL support multiple languages?</div>
+                <div class="answer">The current version of AlzWELL is available in English. Future updates may include multilingual support for global accessibility.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">What are FDG and PIB values, and why are they important?</div>
+                <div class="answer">FDG (Fluorodeoxyglucose) and PIB (Pittsburgh Compound B) are imaging biomarkers used to study brain metabolism and amyloid plaque accumulation, respectively. They are critical indicators in Alzheimer's diagnosis.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">How does the ensemble learning model improve prediction?</div>
+                <div class="answer">The ensemble learning model combines predictions from multiple algorithms like Random Forest, Gradient Boosting, and SVM to improve overall accuracy and reduce bias in predictions.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">Can the system be integrated with existing hospital management systems?</div>
+                <div class="answer">Yes, AlzWELL can be integrated with hospital management systems using APIs, enabling seamless data flow and improved diagnostics support.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">What hardware requirements are needed to run AlzWELL?</div>
+                <div class="answer">AlzWELL is designed to work on systems with moderate computational resources. However, for large-scale MRI and biomarker analyses, a GPU-enabled system is recommended.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">Is there a training period required to use the system?</div>
+                <div class="answer">The system is intuitive and user-friendly, requiring minimal training. A detailed user manual and tutorial videos are provided for ease of use.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">How often should the models be updated?</div>
+                <div class="answer">To maintain accuracy and relevance, it is recommended to update the models annually or whenever significant new data becomes available.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">What are the key benefits of using AlzWELL?</div>
+                <div class="answer">AlzWELL enables early detection of Alzheimer's, assists clinicians with data-driven insights, reduces diagnostic time, and improves patient care.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">How does the system ensure unbiased predictions?</div>
+                <div class="answer">The models are trained on diverse and balanced datasets, and techniques like ensemble learning reduce the likelihood of algorithmic bias.</div>
+            </div>
+            <hr>
+            
+            <div class="faq-item">
+                <div class="question" onclick="toggleAnswer(this)">Can patients access AlzWELL directly?</div>
+                <div class="answer">AlzWELL is designed for use by medical professionals. Patients can benefit through their clinicians who use the system for diagnosis and recommendations.</div>
+            </div>
+            <hr>
+            
+        </section>
+    </div>
+
+    <script src="static/scripts/faqs.js"></script>
+</body>
+</html>

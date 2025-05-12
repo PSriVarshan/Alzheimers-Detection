@@ -1,0 +1,81 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../props/brain.png') no-repeat center center/cover;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+nav .logo {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav .login-signup {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 80vh;
+}
+
+/* Cards */
+.card {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255);
+}
+
+.card-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: black;
+}
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Additional Styles for Responsiveness */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

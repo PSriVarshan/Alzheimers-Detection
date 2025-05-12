@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('../props/brain.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.login-signup {
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.content-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.upload-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.upload-section, .upload-guidelines {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+}
+
+.upload-icon img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+/* Hide the default file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Style the custom label */
+.custom-file-label {
+    background-color: #3e5371;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.custom-file-label:hover {
+    background-color: #1e2a3b;
+}
+
+
+h2{
+    color: white;
+}
+
+
+h3 {
+    color: #000;
+}
+
+button {
+    background-color: #1e2a3b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #3e5371;
+}
+
+input[type="file"] {
+    border: none;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}

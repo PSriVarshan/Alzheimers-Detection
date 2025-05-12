@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlzWELL</title>
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer type="module" src="static/scripts/auth.js"></script>
+</head>
+
+<body>
+    <div class="logo_landing"><img src="static/props/logo-VbaChRgNO-transformed.png"></div>
+    <div class="formbox" id="signup" style="display:none;">
+        <div class="content">
+            <p class="login">SIGNUP</p>
+        </div>
+        <form id="signup-form" method="post">
+            <div class="messageDiv" id="msgUpCont" style="display: none;"></div>
+            <div class="input-group">
+                <input type="text" id="email_id" name="email_id" required>
+                <div class="labelline">Enter Your Mail</div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="username" name="username" required>
+                <div class="labelline">Enter Your Name</div>
+            </div>
+            <div class="input-group">
+                <input type="password" id="pass" name="password" required>
+                <div class="labelline">Create Password</div>
+            </div>
+            <div class="button-container">
+                <button type="button" class="begin-now-button" id="submitSignUp">SIGNUP</button>
+                <p class="sign-up">Already have an account?<br>
+                    <button type="button" class="formbut" id="signInButton">Sign In</button>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <div class="formbox" id="signIn">
+        <div class="content">
+            <p class="login">LOGIN</p>
+        </div>
+        <form id="login-form" method="post">
+            <div class="messageDiv" id="signInMessage" style="display: none;"></div>
+            <div class="input-group">
+                <input type="text" id="email" name="email" required>
+                <div class="labelline">Enter Your Mail</div>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" required>
+                <div class="labelline">Enter Password</div>
+            </div>
+            <p class="reset-password">Forgot password? <a href="reset.html">Reset</a></p>
+            <div class="button-container">
+                <button type="button" class="begin-now-button" id="submitSignIn">LOGIN</button>
+            </div>
+            <p class="sign-up">
+                or Don't have an account?
+                <button type="button" class="formbut" id="signUpButton">Sign Up</button>
+            </p>
+        </form>
+    </div>
+    <script type="module" src="static/scripts/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../props/brain.png') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    /* position: relative; */
+    background-color: black;
+}
+
+nav {
+    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 19px;
+}
+
+/* Dropdown styling */
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Hover effect for navbar items */
+nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 20px;
+}
+
+nav ul li .dropdown-content a {
+    color: white;
+    
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: #555;
+}
+
+h1 {
+    color: #fff;
+    font-size: 50px;
+    padding-left: 30px;
+}
+
+h2 {
+    color: orange;
+    font-size: 30px;
+    padding-left: 30px;
+}
+
+h3 {
+    color: rgb(251, 255, 0);
+    padding-left: 30px;
+}
+
+.card {
+    background-color: rgba(204, 204, 204, 0.8);
+    /* White with 80% opacity */
+    padding: 17px;
+    padding-top: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Drop shadow */
+    width: 47%;
+    
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h4 {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.additional-content {
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+    height: 50%;
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.column:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.heading {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #ff2a8a;
+    /* Customize heading color */
+    text-align: center;
+}
+
+.point {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+    /* Customize point color */
+    text-align: center;
+}
+
+
+/* card flip */
+
+.flip-card-container {
+    padding-left: 150px;
+    display: flex;
+    gap: 300px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    /* Perspective for 3D effect */
+    padding-left: 100px;
+    padding-top: 10px;
+
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* Hide the back side when not flipped */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.flip-card-front {
+    background-color: #000000;
+    /* Blue front side */
+
+}
+
+.flip-card-back {
+    background-color: #000000;
+    /* Dark back side */
+    transform: rotateY(180deg);
+    justify-content: left;
+    text-align: left;
+    font-size: 20px;
+}
+
+/*index page*/
+
+/* White box covering the right side */
+.white-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 50%;
+    height: 100%;
+    /* Full height of the viewport */
+    border-radius: 15% 0 0 15%;
+    /* Rounded corners on the left side */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optional shadow for depth */                  
+    padding: 4vw;
+    /* Add padding for content */
+    box-sizing: border-box;
+}
+.logo_landing img {
+    width: 30%;
+    padding-left: 2vw;
+    padding-top: 2vw;
+}
+
+.content {
+    color: #000000;
+    text-align: center;
+}
+
+.paragraph-1 {
+    font-size: 3vw;
+}
+
+.paragraph-2 {
+    font-size: 3vw;
+    font-weight: bold;
+}
+.button-container {
+    text-align: center;
+    font-size: 2vw;
+}
+
+.begin-now-button {
+    display: inline-block;
+    padding: 2.5% 5%;
+    font-size: 2vw;
+    color: #fff;
+    background-color: #1a3e64;
+    border: none;
+    border-radius: 1vw;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.begin-now-button:hover {
+    background-color: #1E2B3A;
+    
+}
+/* Login Page & signup */
+.login {
+    align-items: center;
+    font-size: 3vw;
+    font-weight: bolder;
+    color: #00516b;
+    letter-spacing: 0.5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.formbut{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size:20px;
+}
+.formbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #000000;
+    width: 50%;
+    height: 100%;
+    /* Full height of the viewport */
+    border-radius: 15% 0 0 15%;
+    /* Rounded corners on the left side */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optional shadow for depth */                  
+    padding: 4vw;
+    /* Add padding for content */
+    box-sizing: border-box;
+}
+
+.sign-up {
+    text-align: center;
+    color: #00516b;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 80px;
+    /* line-height: 80px; */
+}
+.labelline{
+    position: absolute;
+    font-size: 1em;
+    color: #757575;
+    padding: 0 10px;
+    margin: 0 20px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s ease;
+}
+.upcont{
+    color: white;
+}
+
+input[type="text"],
+input[type="password"] {
+    position: absolute;
+    outline: none;
+    background: transparent;
+    width: 80%;
+    padding: 10px 14px;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    font-size: 1.5em;
+    transition: 0.1s ease;
+    z-index: 1111;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="text"]:valid,
+input[type="password"]:valid{
+    color: #00516b;
+    border: 2px solid #00516b;
+}
+input[type="text"]:focus + .labelline,
+input[type="password"]:focus + .labelline,
+input[type="text"]:valid + .labelline,
+input[type="password"]:valid+ .labelline{
+    color: #00516b;
+    transform: translate(-15px,-26px) scale(0.88);
+    z-index: 1111;
+}
+.reset-password {
+    color: white;
+    font-size: 17px;
+    padding-left: 4px;
+}
+.messageDiv{
+    background-color: #00516b;
+    color: #000;
+    width: 80%;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+}
+/* .password-wrapper {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 57px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.reset-password {
+    font-size: 17px;
+    padding-left: 4px;
+}
+
+ */
+
+/* MRI page*/
+.upload {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(204, 204, 204, 0.8);
+    /* White with 80% opacity */
+    padding: 17px;
+    padding-top: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Drop shadow */
+    width: 47%;
+    align-content: center;
+    opacity: 65%;
+}
+
+.container2 {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* biomarker page */
+/* Container */
+.container3 {
+    margin-top: 70px;
+    /* Adjusts for the height of the fixed navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form Container */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Slightly transparent white */
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    max-width: 800px;
+    /* Optional: limits the maximum width */
+}
+
+h5 {
+    text-align: center;
+    color: #000000;
+    font-size: 30px;
+}
+
+/* Form */
+.analysis-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.analysis-form label {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.analysis-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.submit-button {
+    background-color: #1a3e64;
+    width: 25%;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #1E2B3A;
+}
+
+/* Results */
+.results {
+    margin-top: 20px;
+}
+
+.results h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.results p {
+    font-size: 18px;
+}
